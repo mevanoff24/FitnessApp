@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329160429) do
+ActiveRecord::Schema.define(version: 20150329170823) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.string   "date"
+    t.string   "author"
+    t.string   "tag"
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string   "name_href"
+    t.string   "name"
+    t.string   "muscle_targeted_href"
+    t.string   "muscle_targeted"
+    t.integer  "rating"
+    t.string   "image_src"
+    t.string   "image_href"
+    t.string   "image"
+    t.integer  "workout_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
@@ -22,6 +46,13 @@ ActiveRecord::Schema.define(version: 20150329160429) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

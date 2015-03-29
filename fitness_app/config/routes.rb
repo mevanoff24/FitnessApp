@@ -2,13 +2,17 @@ Rails.application.routes.draw do
 
 
 
-  resources :users do
-    resources :workouts do 
-      resources :exercises
-    end
-  end
+  resources :users 
 
   resources :articles
+
+  resources :workouts do 
+    resources :exercises
+  end
+
+  namespace :admin do
+    resources :articles
+  end
 
   get 'welcome/index'
 
