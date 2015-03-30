@@ -8,4 +8,7 @@ class WorkoutsController < ApplicationController
 		
 	end
 	
+	def new
+		@workout = Workout.all
+	end
 end
