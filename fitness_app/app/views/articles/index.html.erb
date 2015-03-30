@@ -1,61 +1,60 @@
+
+
 <h1>ALL ARTICLES</h1>
-
-<div class="col span_4">
-<h2>Workout Articles</h2>
-<div><% @workout_articles.each do |article| %>
-	<%= link_to article.title, article_path(article) %></br>
-	<div><img src="<%= article.image %>"></div>
-	<%= article.tag %></br>
-	<%= article.date %></br>
-	<%= article.author %></br>
-</br>
-<% end %>
+<div class="row">
+	<div class="col span_3">
+		<h2>Workout Articles</h2>
+		<div><% @workout_articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %></br>
+			<div height="100px" class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
+			<%= article.tag %></br>
+			<%= article.date %></br>
+			<%= article.author %></br>
+		</br>
+		<% end %>
+	</div>
 </div>
 
-<div class="col span_4">
-<h2>Nutritional Articles</h2>
-<div><% @nutrition_articles.each do |article| %>
-	<%= link_to article.title, article_path(article) %></br>
-	<div><img src="<%= article.image %>"></div>
-	<%= article.tag %></br>
-	<%= article.date %></br>
-	<%= article.author %></br>
-</br>
-<% end %>
+<div class="row">
+	<div class="col span_3">
+		<h2>Nutritional Articles</h2>
+		<div class="index-image"><% @nutrition_articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %></br>
+			<div><img src="<%= article.image %>" height="100" width="180"></div>
+			<%= article.tag %></br>
+			<%= article.date %></br>
+			<%= article.author %></br>
+		</br>
+		<% end %>
+	</div>
 </div>
 
-<div class="col span_4">
-<h2>Motivational Articles</h2>
-<div><% @motivation_articles.each do |article| %>
-	<%= link_to article.title, article_path(article) %></br>
-	<div><img src="<%= article.image %>"></div>
-	<%= article.tag %></br>
-	<%= article.date %></br>
-	<%= article.author %></br>
-</br>
-<% end %>
+<div class="row">
+	<div class="col span_3">
+		<h2>Motivational Articles</h2>
+		<div><% @motivation_articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %></br>
+			<div class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
+			<%= article.tag %></br>
+			<%= article.date %></br>
+			<%= article.author %></br>
+		</br>
+		<% end %>
+	</div>
 </div>
 
-<div class="col span_4">
-<h2>Supplementational Articles</h2>
-<div><% @supplement_articles.each do |article| %>
-	<%= link_to article.title, article_path(article) %></br>
-	<div><img src="<%= article.image %>"></div>
-	<%= article.tag %></br>
-	<%= article.date %></br>
-	<%= article.author %></br>
-</br>
-<% end %>
+<div class="row">
+	<div class="col span_3">
+		<h2>Supplementational Articles</h2>
+		<div><% @supplement_articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %></br>
+			<div class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
+			<%= article.tag %></br>
+			<%= article.date %></br>
+			<%= article.author %></br>
+		</br>
+		<% end %>
+	</div>
 </div>
 
-<div class="col span_4">
-<h2>Humorous Articles</h2>
-<div><% @humor_articles.each do |article| %>
-	<%= link_to article.title, article_path(article) %></br>
-	<div><img src="<%= article.image %>"></div>
-	<%= article.tag %></br>
-	<%= article.date %></br>
-	<%= article.author %></br>
-</br>
-<% end %>
-</div>
+
