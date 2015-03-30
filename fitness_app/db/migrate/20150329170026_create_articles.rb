@@ -8,6 +8,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :content
       t.string :image
       t.references :category
+      t.references :user
 
       t.timestamps null: false
     end

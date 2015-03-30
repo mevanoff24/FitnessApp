@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'dotenv-rails'
 
+gem 'debugger'
+
 gem 'koala', "~> 1.11.0rc"
 
 # Use ActiveModel has_secure_password

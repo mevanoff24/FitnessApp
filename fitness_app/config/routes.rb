@@ -4,15 +4,16 @@ Rails.application.routes.draw do
 
   get 'category/show'
 
-  resources :users 
+  resources :users do
+    resources :workouts do 
+      resources :exercises
+    end
+  end
 
   resources :articles
 
   resources :categories
   
-  resources :workouts do 
-    resources :exercises
-  end
 
   # namespace :admin do
   #   resources :articles

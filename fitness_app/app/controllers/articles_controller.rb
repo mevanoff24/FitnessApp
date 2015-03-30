@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
 	def index
+		@user = User.find_by(uid: params[:uid])
 		@articles = Article.all
 		@workout_articles = Category.find_by(name: "Workout").articles
 		@nutrition_articles = Category.find_by(name: "Nutrition").articles
