@@ -1,1 +1,14 @@
 <h1>ALL ARTICLES</h1>
+
+
+<h2>Workout Articles</h2>
+<div><% @workout_articles.each do |article| %>
+	<%= link_to article.title, article_path(article) %></br>
+	<div><img src="<%= article.image %>"></div>
+	<%= article.tag %></br>
+	<%= article.date %></br>
+	<%= article.author %></br>
+</br>
+<% end %>
+
+<h2>Workout Articles</h2>
