@@ -10,6 +10,8 @@ require 'CSV'
 
 User.create(name:"Bob")
 User.create(name:"Bill")
+User.create(name:"Tim")
+
 
 
 
@@ -108,4 +110,84 @@ Finishing your workout with such pumping sets temporarily increases pain levelsâ
 In your zeal to grow, you may be inclined to train more often, thinking more is better. However, this can actually undermine your efforts, because muscle growth is only stimulated in the gym; the actual growth processes take place in the presence of good nutrition and sufficient rest.
 
 In fact, short-changing your sleep can suppress levels of testosterone, the hormone responsible for muscle building. As for fuel, if youre eating crap, dont expect itll magically turn to muscle just because youre training hard. Consume clean, high-protein foods every day, and supplement wisely to ensure you optimize the conditions that create anabolism. Dont waste your efforts in the gym with a sloppy diet.", image: "http://www.bodybuilding.com/fun/images/2015/the-10-most-underrated-muscle-building-tips_09.jpg", category_id: 1)
+
+Article.create(title: "6 Stellar Protein Smoothie Recipes!", date: "Mar 30, 2015", author: "Grenade", tag: "Whether you're looking for a post-workout recovery shake or simply want to top off your meal with a protein-rich treat, each of these recipes offers up a healthy option to fuel your gains!", content: "MIXED BERRY CHOCOLATE SMOOTHIE
+International cover model and Natural Eastern USA Physique Champion Melih Cologlu swears by this protein shake with five-star flavor. With a full scoop of protein, a bit of nonfat Greek yogurt, and a handful of berries, it adds a fruity punch to a sweet, chocolate base. Yum!
+
+
+
+INGREDIENTS
+
+WATER 3/4 CUP
+
+ICE 2 CUBES
+
+FROZEN BERRIES 1/2 CUP
+
+NONFAT STRAWBERRY GREEK YOGURT 1/3 CUP
+
+GRENADE HYDRA 6 CHOCOLATE CHARGE 1 SCOOP
+DIRECTIONS 
+Combine all ingredients in a blender. Blend and serve.
+
+NUTRITION FACTS
+Serving size: 1 shake
+Recipe yields: 1 serving
+Amount per serving
+Calories 230
+Total Fat3.5 g
+Total Carbs 21 g
+Protein28 g
+2", image: "http://www.bodybuilding.com/fun/images/2015/6-stellar-protein-smoothie-recipes-facebook.jpg", category_id: 2)
+
+Article.create(title: "4 WHEY DELICIOUS PROTEIN RECIPES", date: "Feb 26, 2015", author: "Anna Sward ", tag: "Dessert doesn't have to be chock-full of calories and followed by feelings of guilt. Dig into indulgent sweets and stay on track with these delicious, easy whey protein recipes!", content: "4 DARK CHOCOLATE FUDGE BROWNIE PROTEIN COOKIE 
+CRUMBLE POT
+
+
+
+
+There are few things as delectable as digging in to a cookie crumble pot. As soon as you dip your spoon in, you get the crunchiness, creaminess, and warmth of chocolate paired with cool ice cream. It's that combination of cake and gooey chocolate that tops all else.
+
+The best part: You can indulge without throwing your diet out the window. It's not wizardry I'm describing here. It's protein that packs a punch!
+
+Ingredients
+PROTEIN COOKIES
+1/4 cup Dymatize ISO-100 Chocolate Fudge Brownie
+1 tbsp honey
+2 tbsp peanut butter (or three, if you're a sucker for the butter)
+1/4 cup cocoa powder
+1 small egg
+FIRST LAYER
+2 pots (340 g) Greek 0% fat yogurt
+TOPPING
+2 squares melted dark chocolate
+2 tbsp ground almonds
+Directions
+Place cookie ingredients in a food processor and blend together until they form a paste.
+Shape mix into 6-10 small balls and flatten each one on a baking-paper-lined cookie tray.
+Bake at 350 F (175 C) for about 7-10 minutes, or until cookies are cooked through. Do not overbake. It's best to take them out while they're still soft in the center, because they tend to set a bit more as they cool.
+To assemble cookie pots, layer 1/2 cup Greek yogurt into ramekins. If you don't mind adding a little extra fat, you can use ricotta or mascarpone, too. Crumble a cookie and sprinkle it on top. Add some melted dark chocolate and top with 1/2 tbsp ground almonds. Ta-da! It's delicious goodness in a bowl!
+NUTRITION FACTS
+(BROWNIE POT)
+Serving Size: 1 pot
+Recipe Yields: 4 servings
+Amount per serving
+Calories 227
+Total Fat11g
+Total Carbs12g
+Protein22g
+NUTRITION FACTS 
+(COOKIES)
+Serving Size: 1 cookie
+Recipe Yields: 4 servings
+Amount per serving
+Calories 136
+Total Fat7g
+Total Carbs7g
+Protein12g
+", image: "http://www.bodybuilding.com/fun/images/2014/4-easy-whey-protein-recipes-feature.jpg", category_id: 3)
+
+Article.create(title: "FITSTAGRAM VOL. 22: #TRANSFORMATIONTUESDAY", author: "Fitstagram ", date: "Feb 05, 2015", tag: "These 10 amazing transformations will get you through any tough day. Scroll through and get motivated!", content: "Get Motivated With All of this", image: "http://www.bodybuilding.com/fun/images/2015/fitstagram-volume-22-featurebox.jpg", category_id: 4)
+
+Article.create(title: "Never Skip Leg Day", author: "Matt Evanoff", date: "March 30 2015", tag: "Mushroom Man", content: "Please never look like this guy", image: "http://yourfitnesscorner.com/wp-content/uploads/2013/08/friends-dont-let-friends-skip-leg-day.jpg", category_id: 5)
 
