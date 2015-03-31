@@ -30,3 +30,5 @@ Please feel free to use a different markup language if you do not plan to run
 
 Twillio send text daily about upcomming workout
 Workout motivator send youtube video
+
+random video from youtube on motivation page

@@ -6,6 +6,7 @@
 <div class="row">
 	<div class="col span_3">
 		<h2>Workout Articles</h2>
+		<h3><%= link_to "See All", catindex_path(1) %></h3>
 		<div><% @workout_articles.each do |article| %>
 			<%= link_to article.title, article_path(article) %></br>
 			<div height="100px" class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
@@ -20,6 +21,7 @@
 <div class="row">
 	<div class="col span_3">
 		<h2>Nutritional Articles</h2>
+		<h3><%= link_to "See All", catindex_path(2) %></h3>
 		<div class="index-image"><% @nutrition_articles.each do |article| %>
 			<%= link_to article.title, article_path(article) %></br>
 			<div><img src="<%= article.image %>" height="100" width="180"></div>
@@ -34,6 +36,7 @@
 <div class="row">
 	<div class="col span_3">
 		<h2>Motivational Articles</h2>
+		<h3><%= link_to "See All", catindex_path(3) %></h3>
 		<div><% @motivation_articles.each do |article| %>
 			<%= link_to article.title, article_path(article) %></br>
 			<div class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
@@ -48,6 +51,7 @@
 <div class="row">
 	<div class="col span_3">
 		<h2>Supplementational Articles</h2>
+		<h3><%= link_to "See All", catindex_path(4) %></h3>
 		<div><% @supplement_articles.each do |article| %>
 			<%= link_to article.title, article_path(article) %></br>
 			<div class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>

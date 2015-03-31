@@ -13,5 +13,9 @@ class ArticlesController < ApplicationController
 	def show
 		@article = Article.find(params[:id])
 	end
+
+	def catindex
+		@articles = Category.find(params[:id]).articles
+	end
 end
 

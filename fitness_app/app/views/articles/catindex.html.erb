@@ -1,0 +1,9 @@
+<h2>Articles</h2>
+		<div><% @articles.each do |article| %>
+			<%= link_to article.title, article_path(article) %></br>
+			<div height="100px" class="index-image"><img src="<%= article.image %>" height="100" width="180"></div>
+			<%= article.tag %></br>
+			<%= article.date %></br>
+			<%= article.author %></br>
+		</br>
+		<% end %>
