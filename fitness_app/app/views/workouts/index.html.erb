@@ -1,0 +1,9 @@
+<h1>All Made Workouts</h1>
+
+<% @user_workouts.each do |item| %>
+	<div>Title: <%= item.title %></div>
+	<div>Description: <%= item.description if item.description != '' %></div>
+	<div>Sets: <%= item.sets %></div>
+	<div>Reps: <%= item.reps %></div>
+	<div>Weight: <%= item.weight %></div>
+<% end %>

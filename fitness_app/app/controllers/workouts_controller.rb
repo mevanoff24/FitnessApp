@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
 
 	def index
-
+		@user_workouts = User.find_by(uid: params[:uid]).workouts
 	end
 
 	def show
