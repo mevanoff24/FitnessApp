@@ -60,6 +60,10 @@ ActiveRecord::Schema.define(version: 20150330172627) do
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
+    t.string   "exercise"
+    t.string   "sets"
+    t.string   "reps"
+    t.integer  "weight"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
