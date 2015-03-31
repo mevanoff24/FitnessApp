@@ -1,6 +1,6 @@
 <h1>Edit New Workout</h1>
 
-<%= form_for :workout, url: user_workouts_path(@user) do |f| %>
+<%= form_for :workout, :url => { :action => "update" }, :html => { :method => :put} do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 
@@ -9,5 +9,5 @@
 
 <!-- AJAX when title is made and add exercise or show hide or on submit new exercise form shows -->
 
-  <%= f.submit "Create New Workout" %>
+  <%= f.submit "Update" %>
 <% end %>
