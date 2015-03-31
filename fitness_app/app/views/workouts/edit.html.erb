@@ -1,23 +1,13 @@
 <h1>Edit New Workout</h1>
 
-<%= form_for @workoutt, url: user_workouts_path(@user) do |f| %>
+<%= form_for :workout, url: user_workouts_path(@user) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 
  Optional <%= f.label :description %>:
   <%= f.text_field :description %><br />
 
-   <%= f.label :exercise %>:
-  <%= f.text_field :exercise %><br />
 <!-- AJAX when title is made and add exercise or show hide or on submit new exercise form shows -->
-   <%= f.label :sets %>:
-  <%= f.text_field :sets %><br />
-
-   <%= f.label :reps %>:
-  <%= f.text_field :reps %><br />
-
-   <%= f.label :weight %>:
-  <%= f.text_field :weight %><br />
 
   <%= f.submit "Create New Workout" %>
 <% end %>

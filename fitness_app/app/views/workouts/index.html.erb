@@ -2,11 +2,13 @@
 
 <p><% @user_workouts.each do |item| %>
 	<div>Title: <%= item.title %></div>
-	<div>Description: <%= item.description if item.description != '' %></div>
-	<div>Sets: <%= item.sets %></div>
-	<div>Reps: <%= item.reps %></div>
-	<div>Weight: <%= item.weight %></div>
-	<%= link_to "Show", user_workout_path(@user, item) %>
-	<%= button_to "Update", edit_user_workout_path(@user, item) %>
+	<% if item.description != nil %>
+		<div>Description: <%= item.description %></div>
+	<% else %>
+    <div>></div>
+	<% end %>
+	<%= link_to "Show", user_workout_path(@user, item) %> |
+	<%= link_to "Update", edit_user_workout_path(@user, item) %>
 <% end %>
 </p>
+</br>

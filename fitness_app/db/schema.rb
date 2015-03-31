@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20150330172627) do
     t.string   "name"
     t.string   "muscle_targeted_href"
     t.string   "muscle_targeted"
+    t.text     "reps"
+    t.text     "weight"
     t.integer  "rating"
     t.string   "image_src"
     t.string   "image_href"
@@ -60,10 +62,6 @@ ActiveRecord::Schema.define(version: 20150330172627) do
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "exercise"
-    t.string   "sets"
-    t.string   "reps"
-    t.integer  "weight"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

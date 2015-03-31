@@ -5,6 +5,8 @@ class CreateExercises < ActiveRecord::Migration
       t.string :name
       t.string :muscle_targeted_href
       t.string :muscle_targeted
+      t.text :reps
+      t.text :weight
       t.integer :rating
       t.string :image_src
       t.string :image_href
