@@ -32,3 +32,13 @@ Twillio send text daily about upcomming workout
 Workout motivator send youtube video
 
 random video from youtube on motivation page
+
+get facebook image
+
+auto complete exercise addition
+
+put number of input boxes for number of sets added ajax
+
+header
+
+welcome index
