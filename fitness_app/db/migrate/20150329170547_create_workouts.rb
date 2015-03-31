@@ -4,6 +4,7 @@ class CreateWorkouts < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.references :user
+      t.references :exercise
 
       t.timestamps null: false
     end
