@@ -1,0 +1,10 @@
+
+<div><%= @user_workout.title %></div>
+<div><%= @user_workout.description if @user_workout.description != nil %></div>
+<div><%= @user_workout.exercise %></div>
+<div><%= @user_workout.sets %></div>
+<div><%= @user_workout.reps %></div>
+<div><%= @user_workout.weight %></div>
+<%= link_to "Update", edit_user_workout_path(@user, @user_workout) %>
+
+

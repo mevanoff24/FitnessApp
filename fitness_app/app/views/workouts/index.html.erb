@@ -1,9 +1,12 @@
 <h1>All Made Workouts</h1>
 
-<% @user_workouts.each do |item| %>
+<p><% @user_workouts.each do |item| %>
 	<div>Title: <%= item.title %></div>
 	<div>Description: <%= item.description if item.description != '' %></div>
 	<div>Sets: <%= item.sets %></div>
 	<div>Reps: <%= item.reps %></div>
 	<div>Weight: <%= item.weight %></div>
+	<%= link_to "Show", user_workout_path(@user, item) %>
+	<%= button_to "Update", edit_user_workout_path(@user, item) %>
 <% end %>
+</p>
