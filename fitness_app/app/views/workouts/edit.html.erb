@@ -1,6 +1,6 @@
 <h1>Edit New Workout</h1>
 
-<%= form_for :workout, :url => { :action => "update" }, :html => { :method => :put} do |f| %>
+<%= form_for @workout, url: user_workout_path do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 

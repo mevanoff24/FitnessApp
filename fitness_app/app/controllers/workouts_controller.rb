@@ -11,24 +11,25 @@ class WorkoutsController < ApplicationController
 	end
 	
 	def new
-		@user = User.find_by(uid: params[:uid])
-		@workout = Workout.all
+
 	end
 
 	def create
-		@user_workout = User.find_by(uid: params[:uid]).workouts.new(title: params[:workouts][:title], description: params[:workouts][:description])
-		@user_workout.save!
+		p params
+		user_workout = Workout.new(title: params[:workout][:title], description: params[:workout][:description], user_id: params[:user_id] )
+		user_workout.save!
 		redirect_to articles_path
 	end
 
 	def edit
-		@user_workout = User.find_by(uid: params[:uid]).workouts.find(params[:id])
+		@workout = Workout.find(params[:id])
+		# @user_workout = User.find_by(uid: params[:uid]).workouts.find(params[:id])
 		@user = User.find_by(uid: params[:uid])
 
 	end
 
 	def update
-		User.find_by(uid: params[:uid]).workouts.update(title: params[:workouts][:title], description: params[:workouts][:description])
+		Workout.update(title: params[:workout][:title], description: params[:workout][:description], user_id: params[:user_id])
 		redirect_to articles_path
 	end
 end
