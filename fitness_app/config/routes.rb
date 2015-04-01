@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  resources :exercises
+
   get "categories/:id/articles", to: "articles#catindex", as: 'catindex'
 
   # namespace :admin do

@@ -39,6 +39,14 @@ auto complete exercise addition
 
 put number of input boxes for number of sets added ajax
 
-header
+header - workout path
+       - article path 
+       - exercise path
+       - profile path?
+       - sign out
+       - back
 
 welcome index
+
+
+

@@ -1,5 +1,7 @@
 <h1>All Made Workouts</h1>
 
+<%= link_to "Create Workout Routine", new_user_workout_path(@user) %>
+
 <p><% @user_workouts.each do |item| %>
 	<div>Title: <%= item.title %></div>
 	<% if item.description != nil %>

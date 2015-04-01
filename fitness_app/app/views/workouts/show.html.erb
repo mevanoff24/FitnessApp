@@ -3,6 +3,8 @@
 <% if @user_workout.description != nil %>
     <div>Description: <%= @user_workout.description %></div>
 <% end %>
-<%= link_to "Update", edit_user_workout_path(@user, @user_workout) %>
+<%= link_to "Update", edit_user_workout_path(@user, @user_workout) %> |
+<%= link_to "Delete", @user_workout_path, :method => "delete" %>
+
 
 

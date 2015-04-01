@@ -11,11 +11,10 @@ class WorkoutsController < ApplicationController
 	end
 	
 	def new
-
+		@user = User.find_by(uid: params[:uid])
 	end
 
 	def create
-		p params
 		user_workout = Workout.new(title: params[:workout][:title], description: params[:workout][:description], user_id: params[:user_id] )
 		user_workout.save!
 		redirect_to articles_path
@@ -28,6 +27,12 @@ class WorkoutsController < ApplicationController
 
 	def update
 		@workout = Workout.find(params[:id]).update(title: params[:workout][:title], description: params[:workout][:description])
+		redirect_to articles_path
+	end
+
+	def destroy
+		@workout = Workout.find(params[:id])
+		@workout.destroy
 		redirect_to articles_path
 	end
 end
