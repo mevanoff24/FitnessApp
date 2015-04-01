@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330172627) do
+ActiveRecord::Schema.define(version: 20150401210352) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -43,9 +43,17 @@ ActiveRecord::Schema.define(version: 20150330172627) do
     t.string   "image_src"
     t.string   "image_href"
     t.string   "image"
-    t.integer  "workout_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "routines", force: :cascade do |t|
+    t.string   "name"
+    t.text     "rep"
+    t.text     "weight"
+    t.integer  "workout_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150330172627) do
     t.string   "title"
     t.string   "description"
     t.integer  "user_id"
+    t.integer  "routine_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

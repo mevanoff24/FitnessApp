@@ -11,7 +11,6 @@ class CreateExercises < ActiveRecord::Migration
       t.string :image_src
       t.string :image_href
       t.string :image
-      t.references :workout
 
       t.timestamps null: false
     end

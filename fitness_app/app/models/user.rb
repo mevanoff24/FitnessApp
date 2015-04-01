@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :workouts
-  has_many :exercises, through: :workouts
+  has_many :routines, through: :workouts
 
 	 def self.from_omniauth(auth)
     user = User.find_or_create_by(provider: auth.provider, uid: auth.uid)

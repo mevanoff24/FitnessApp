@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   resources :users do
     resources :workouts do 
       resources :exercises
@@ -14,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :exercises
 
-  get "exercises/:muscle_targeted", to: "exercises#show"
+  # get "exercises/:muscle_targeted", to: "exercises#show"
 
   get "categories/:id/articles", to: "articles#catindex", as: 'catindex'
 
