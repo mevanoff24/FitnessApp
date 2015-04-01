@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20150401210352) do
 
   create_table "routines", force: :cascade do |t|
     t.string   "name"
-    t.text     "rep"
+    t.text     "reps"
     t.text     "weight"
     t.integer  "workout_id"
     t.datetime "created_at", null: false

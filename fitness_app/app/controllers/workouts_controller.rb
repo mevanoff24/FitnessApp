@@ -15,6 +15,7 @@ class WorkoutsController < ApplicationController
 	end
 
 	def create
+		p params
 		user_workout = Workout.new(title: params[:workout][:title], description: params[:workout][:description], user_id: params[:user_id] )
 		user_workout.save!
 		redirect_to articles_path

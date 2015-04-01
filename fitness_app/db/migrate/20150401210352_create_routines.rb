@@ -2,7 +2,7 @@ class CreateRoutines < ActiveRecord::Migration
   def change
     create_table :routines do |t|
     	t.string :name
-      t.text :rep
+      t.text :reps
       t.text :weight
       t.references :workout
 
