@@ -23,13 +23,11 @@ class WorkoutsController < ApplicationController
 
 	def edit
 		@workout = Workout.find(params[:id])
-		# @user_workout = User.find_by(uid: params[:uid]).workouts.find(params[:id])
 		@user = User.find_by(uid: params[:uid])
-
 	end
 
 	def update
-		Workout.update(title: params[:workout][:title], description: params[:workout][:description], user_id: params[:user_id])
+		@workout = Workout.find(params[:id]).update(title: params[:workout][:title], description: params[:workout][:description])
 		redirect_to articles_path
 	end
 end
