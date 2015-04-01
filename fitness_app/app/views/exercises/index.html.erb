@@ -1,20 +1,28 @@
 
+<h2>Categories</h2>
+<div>Abdominals</div>
+<div>Biceps</div>
+<div>Calves</div>
+<div>Chest</div>
+<div>Forearms</div>
+<div>Glutes</div>
+<div>Hamstrings</div>
+<div>Lats</div>
+<div>Lower Back</div>
+<div>Middle Back</div>
+<div>Neck</div>
+<div>Quadriceps</div>
+<div>Shoulders</div>
+<div>Traps</div>
+<div>Triceps</div>
+
+
 <% @exercises.each do |exercise| %>
 	<div><a href="<%= exercise.name_href %>"><%= exercise.name %></a>
 	<div><%= exercise.muscle_targeted %></div>
 	<div>Rating: <%= exercise.rating %></div>
 	<div><%= exercise.image %></div>
 	<div><img src="<%= exercise.image_src %>"></div>
-
-
 <% end %>
 
 
- t.string :name_href
-      t.string :name
-      t.string :muscle_targeted_href
-      t.string :muscle_targeted
-      t.integer :rating
-      t.string :image_src
-      t.string :image_href
-      t.string :image

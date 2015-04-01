@@ -1,0 +1,8 @@
+
+<% @ab_exercises.each do |exercise| %>
+	<div><a href="<%= exercise.name_href %>"><%= exercise.name %></a>
+	<div><%= exercise.muscle_targeted %></div>
+	<div>Rating: <%= exercise.rating %></div>
+	<div><%= exercise.image %></div>
+	<div><img src="<%= exercise.image_src %>"></div>
+<% end %>
