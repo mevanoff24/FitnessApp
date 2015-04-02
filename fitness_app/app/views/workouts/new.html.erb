@@ -8,17 +8,26 @@
   <%= f.text_field :description %><br />
 
   <%= f.fields_for Routine.new do |builder| %>
-	  	<%= builder.label :name %><br />
-	  	<%= builder.text_area :name %>
+  	<%= builder.label :name %><br />
+  	<%= builder.text_area :name %>
 
-	  	<%= builder.label :reps %><br />
-	  	<%= builder.text_area :reps %>
+  	<%= builder.label :reps %><br />
+  	<%= builder.text_area :reps %>
 
-	  	<%= builder.label :weight %><br />
-	  	<%= builder.text_area :weight %>
+  	<%= builder.label :weight %><br />
+  	<%= builder.text_area :weight %>
 
-	  	<%= builder.check_box :_destroy %><br />
-	  	<%= builder.label :_destroy, "Delete" %>
+  <% end %>
+
+  <%= f.fields_for Routine.new do |builder| %>
+	  <%= builder.label :name %><br />
+	  <%= builder.text_area :name %>
+
+	  <%= builder.label :reps %><br />
+	  <%= builder.text_area :reps %>
+
+	  <%= builder.label :weight %><br />
+	  <%= builder.text_area :weight %>
 
   <% end %>
 

@@ -4,11 +4,14 @@
 
 <p><% @user_workouts.each do |item| %>
 	<div>Title: <%= item.title %></div>
-	<% if item.description != nil %>
 		<div>Description: <%= item.description %></div>
-	<% else %>
-    <div>></div>
-	<% end %>
+		<% item.routines.each do |rout|%>
+		<div>Exercise: <%= rout.name %></div>
+		<% counter = 0 %>
+		<div>Reps: <%= rout.reps[counter] %></div>
+		<div>Weight: <%= rout.name[counter] %></div>
+		<% counter += 1 %>
+		<% end %>
 	<%= link_to "Show", user_workout_path(@user, item) %> |
 	<%= link_to "Update", edit_user_workout_path(@user, item) %>
 <% end %>
