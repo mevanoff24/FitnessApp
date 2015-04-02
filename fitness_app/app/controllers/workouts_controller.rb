@@ -24,7 +24,7 @@ class WorkoutsController < ApplicationController
 		user_workout.save!
 		user_routine.save!
 		user_routine.update(workout_id: user_workout.id)
-		redirect_to articles_path
+		redirect_to user_workouts_path
 	end
 
 	def edit
@@ -34,12 +34,12 @@ class WorkoutsController < ApplicationController
 
 	def update
 		@workout = Workout.find(params[:id]).update(title: params[:workout][:title], description: params[:workout][:description])
-		redirect_to articles_path
+		redirect_to user_workouts_path
 	end
 
 	def destroy
 		@workout = Workout.find(params[:id])
 		@workout.destroy
-		redirect_to articles_path
+		redirect_to user_workouts_path
 	end
 end

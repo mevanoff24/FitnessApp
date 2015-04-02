@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'motivation/index'
+
   resources :users do
     resources :workouts do 
       resources :exercises
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :exercises
+
+  get "/motivation", to: "motivation#index"
 
   # get "exercises/:muscle_targeted", to: "exercises#show"
 

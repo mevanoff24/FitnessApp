@@ -1,9 +1,23 @@
-
-
 <h1>ALL ARTICLES</h1>
 
-<%= link_to "Create Workout Routine", new_user_workout_path(@user) %>
-<%= link_to "All Your Workouts", user_workouts_path(@user) %>
+
+<div class="band navigation">
+  <div class="row">
+    <div class="col span_3 button button-primary button-selected">
+      <p><%= link_to "Workouts", user_workouts_path(@user) %></p>
+    </div>
+    <div class="col span_3 button button-primary">
+      <p><%= link_to "Articles", articles_path %></p>
+    </div>
+    <div class="col span_3 button button-primary">
+      <p><%= link_to "Exercises", exercises_path %></p>
+    </div>
+    <div class="col span_3 button button-primary">
+      <p><%= link_to "Motivation"%></p>
+    </div>
+  </div>
+</div>
+
 
 <div class="row">
 	<div class="col span_3">
