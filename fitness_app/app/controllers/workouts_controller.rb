@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+	# before_action :set_user
 
 	def index
 		@user = User.find_by(uid: params[:uid])
@@ -42,4 +43,13 @@ class WorkoutsController < ApplicationController
 		@workout.destroy
 		redirect_to user_workouts_path
 	end
+
+	private 
+	
+	def set_user
+		@user = User.find_by(uid: params[:uid])
+	end
+
+
+
 end

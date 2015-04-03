@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+	# before_action :set_article
+	before_action :authenticate, except: [:index, :show]
 
 	def index
 		@user = User.find_by(uid: params[:uid])
@@ -17,6 +19,14 @@ class ArticlesController < ApplicationController
 	def catindex
 		@article_cat = Category.find(params[:id])
 		@articles = Category.find(params[:id]).articles
+	end
+
+	private
+
+	def authenticate
+		authenticate_or_request_with_http_basic do |name, password|
+			name = "admin" && password == "secret"
+		end
 	end
 end
 
