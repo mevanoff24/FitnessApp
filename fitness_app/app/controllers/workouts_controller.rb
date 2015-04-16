@@ -1,18 +1,16 @@
 class WorkoutsController < ApplicationController
-	# before_action :set_user
+	before_action :set_user, only: [:index, :show, :new, :edit]
+	before_action :set_workout, only: [:edit, :destroy]
 
 	def index
-		@user = User.find_by(uid: params[:uid])
 		@user_workouts = User.find_by(uid: params[:uid]).workouts
 	end
 
 	def show
-		@user = User.find_by(uid: params[:uid])
 		@user_workout = User.find_by(uid: params[:uid]).workouts.find(params[:id])
 	end
 	
 	def new
-		@user = User.find_by(uid: params[:uid])
 	end
 
 	def create
@@ -30,7 +28,6 @@ class WorkoutsController < ApplicationController
 
 	def edit
 		@workout = Workout.find(params[:id])
-		@user = User.find_by(uid: params[:uid])
 	end
 
 	def update
@@ -41,13 +38,17 @@ class WorkoutsController < ApplicationController
 	def destroy
 		@workout = Workout.find(params[:id])
 		@workout.destroy
-		redirect_to user_workouts_path
+		redirect_to articles_path
 	end
 
 	private 
 	
 	def set_user
 		@user = User.find_by(uid: params[:uid])
+	end
+
+	def set_workout
+		@workout = Workout.find(params[:id])
 	end
 
 
