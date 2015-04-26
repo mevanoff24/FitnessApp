@@ -1,18 +1,26 @@
 Rails.application.routes.draw do
 
-  get 'motivation/index'
-
   resources :users do
     resources :workouts do 
       resources :exercises
     end
   end
 
-  resources :articles
+  resources :articles do 
+    resources :comments
+  end
 
   resources :categories
 
   resources :exercises
+
+  resources :posts do 
+    member do 
+      get "like", to: 'posts#upvote'
+      get "dislike", to: 'posts#downvote'
+    end
+    resources :comments
+  end
 
   get "/motivation", to: "motivation#index"
 
