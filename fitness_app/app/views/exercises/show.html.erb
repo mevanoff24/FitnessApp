@@ -1,4 +1,4 @@
-
+<%= render 'layouts/navbar' %>
 <% @exercises.each do |exercise| %>
 	<div><a href="<%= exercise.name_href %>"><%= exercise.name %></a>
 	<div><%= exercise.muscle_targeted %></div>

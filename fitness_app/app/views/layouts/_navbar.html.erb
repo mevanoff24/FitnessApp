@@ -1,19 +1,15 @@
-
-<body>
-  <header>
-    <div class="wrapper" class="clearfix">
-
-      <div id="logo">
-        <%= link_to "FIT-SPIRATION", articles_path %>
-      </div>
-      <nav>
-        <% if current_user %>
-          <%= link_to current_user.name, "#" %>
-          <%= link_to "Add New Inspiration", new_post_path, class: "button" %>
-        <% else %>
-          <%= link_to "Sign in", "#" %>
-          <%= link_to "Sign Up", "#", class: "button" %>
-      </nav>
+<header>
+  <div class="wrapper" class="clearfix">
+    <div id="logo">
+      <%= link_to "HOME", articles_path %>
     </div>
-  </header>
-</body>
+    <nav>
+      <% if current_user %>
+        <%= link_to current_user.name, "#" %>
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <% else %>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      <% end %>
+    </nav>
+  </div>
+</header>
