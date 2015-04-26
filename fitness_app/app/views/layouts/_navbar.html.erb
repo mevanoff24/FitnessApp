@@ -1,16 +1,19 @@
-<div class="band navigation">
-  <div class="row">
-    <div class="col span_3 button button-primary button-selected">
-      <p><%= link_to "Workouts", user_workouts_path(@user) %></p>
+
+<body>
+  <header>
+    <div class="wrapper" class="clearfix">
+
+      <div id="logo">
+        <%= link_to "FIT-SPIRATION", articles_path %>
+      </div>
+      <nav>
+        <% if current_user %>
+          <%= link_to current_user.name, "#" %>
+          <%= link_to "Add New Inspiration", new_post_path, class: "button" %>
+        <% else %>
+          <%= link_to "Sign in", "#" %>
+          <%= link_to "Sign Up", "#", class: "button" %>
+      </nav>
     </div>
-    <div class="col span_3 button button-primary">
-      <p><%= link_to "Articles", articles_path %></p>
-    </div>
-    <div class="col span_3 button button-primary">
-      <p><%= link_to "Exercises", exercises_path %></p>
-    </div>
-    <div class="col span_3 button button-primary">
-      <p><%= link_to "Motivation"%></p>
-    </div>
-  </div>
-</div>
+  </header>
+</body>

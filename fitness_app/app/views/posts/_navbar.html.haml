@@ -2,7 +2,7 @@
 	%header
 		.wrapper.clearfix
 
-			#logo= link_to "FIT-SPIRATION", root_path
+			#logo= link_to "FIT-SPIRATION", articles_path
 			%nav
 				- if current_user
 					= link_to current_user.name, "#"
