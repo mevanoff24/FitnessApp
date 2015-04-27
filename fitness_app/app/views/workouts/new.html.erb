@@ -1,14 +1,14 @@
 <%= render 'layouts/navbar' %>
 <h1>Create New Workout</h1>
 
-<%= form_for Workout.new, url: user_workouts_path(@user) do |f| %>
+<%= form_for ([current_user, @workout]) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 
  Optional <%= f.label :description %>:
   <%= f.text_field :description %><br />
 
-  <%= f.fields_for Routine.new do |builder| %>
+  <%= f.fields_for :routines do |builder| %>
   	<%= builder.label :name %><br />
   	<%= builder.text_area :name %>
 
@@ -20,17 +20,6 @@
 
   <% end %>
 
-  <%= f.fields_for Routine.new do |builder| %>
-	  <%= builder.label :name %><br />
-	  <%= builder.text_area :name %>
-
-	  <%= builder.label :reps %><br />
-	  <%= builder.text_area :reps %>
-
-	  <%= builder.label :weight %><br />
-	  <%= builder.text_area :weight %>
-
-  <% end %>
 
 <!-- AJAX when title is made and add exercise or show hide or on submit new exercise form shows -->
 
