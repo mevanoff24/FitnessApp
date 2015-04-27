@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150426021546) do
     t.string   "image_src"
     t.string   "image_href"
     t.string   "image"
+    t.integer  "routine_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
