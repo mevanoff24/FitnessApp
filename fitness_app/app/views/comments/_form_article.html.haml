@@ -1,0 +1,4 @@
+= render 'layouts/navbar'
+= simple_form_for([@article, @article.comments.build]) do |f|
+	= f.input :content, label: "Reply to thread"
+	= f.button :submit, class: 'button' 

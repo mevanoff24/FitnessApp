@@ -1,7 +1,38 @@
 <%= render 'layouts/navbar' %>
-<h1><%= @article.title %></h1>
-<div><img src="<%= @article.image %>"></div>
-<h2><%= @article.tag %></h2>
-<div><%= @article.date %></div>
-<div><%= @article.author %></div>
-<div><%= @article.content %></div>
+<div id="post_show">
+	<h1><%= @article.title %></h1>
+	<div class="clearfix">
+		<div class="post_image_description">
+			<div><img src="<%= @article.image %>"></div>
+			<h2><%= @article.tag %></h2>
+			<div class="description">
+				<div><%= @article.date %></div>
+				<div><%= @article.author %></div>
+				<div><%= @article.content %></div>
+			</div>
+		</div>
+		<div id="random_post">
+			<h3>Random Article</h3>
+			<div class="post">
+				<div class="post_image">
+					<%= link_to (image_tag @random_article.image), article_path(@random_article) %>
+				</div>
+				<div class="post_content">
+					<div class="title">
+						<h2><%= link_to @random_article.title, article_path(@random_article)%></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="comments">
+	<h2 class="comment_count"><%= pluralize(@article.comments.count, "Comments")%></h2>
+	<% @article.comments.each do |comment| %>
+	<div class="comment">
+		<p class="username"><%= comment.user%></p>
+		<p class="content"><%= comment.content %></p>
+	</div>
+	<% end %>
+	<%= render "comments/form_article" %>
+</div>

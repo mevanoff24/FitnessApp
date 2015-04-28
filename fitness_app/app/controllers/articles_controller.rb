@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@random_article = Article.where.not(id: @article).order("RANDOM()").first
 	end
 
 	def catindex
