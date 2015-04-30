@@ -4,6 +4,10 @@ class ExercisesController < ApplicationController
 		@exercises = Exercise.all
 	end
 
+	def show
+		@exercise = Exercise.find(params[:id])
+	end
+
 	# def show
 	# 	@exercises = Exercise.where(muscle_targeted: params[:id])	
 	# end
