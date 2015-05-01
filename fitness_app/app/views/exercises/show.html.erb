@@ -2,26 +2,18 @@
 <div id="post_show">
 	<div class="clearfix">
 		<div class="post_image_description">
-			<% @exercise.name %>
-			<div><a href="<%= @exercise.name_href %>"><%= @exercise.name %></a></div>
+			<% @exercises.each do |exercise|%>
+			<div><a href="<%= exercise.name_href %>"><%= exercise.name %></a></div>
 				<div class="description">
-					<div><%= @exercise.muscle_targeted %></div>
-					<div>Rating: <%= @exercise.rating %></div>
-					<div><%= @exercise.image %></div>
-					<div><img src="<%= @exercise.image_src %>"></div>
+					<div><%= exercise.muscle_targeted %></div>
+					<div>Rating: <%= exercise.rating %></div>
+					<div><%= exercise.image %></div>
+					<div><img src="<%= exercise.image_src %>"></div>
 				</div>
+				<% end %>
 
 			</div>
 		</div>
 	</div>
 
-	<div id="comments">
-		<h2 class="comment_count"><%= pluralize(@article.comments.count, "Comments")%></h2>
-		<% @article.comments.each do |comment| %>
-		<div class="comment">
-			<p class="username"><%= comment.user%></p>
-			<p class="content"><%= comment.content %></p>
-		</div>
-		<% end %>
-		<%= render "comments/form_article" %>
-	</div>
+	

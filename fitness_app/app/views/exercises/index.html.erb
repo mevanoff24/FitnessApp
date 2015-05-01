@@ -1,20 +1,21 @@
 <%= render 'layouts/navbar' %>
 <h2>Categories</h2>
-<div>Abdominals</div>
-<div>Biceps</div>
-<div>Calves</div>
-<div>Chest</div>
-<div>Forearms</div>
-<div>Glutes</div>
-<div>Hamstrings</div>
-<div>Lats</div>
-<div>Lower Back</div>
-<div>Middle Back</div>
-<div>Neck</div>
-<div>Quadriceps</div>
-<div>Shoulders</div>
-<div>Traps</div>
-<div>Triceps</div>
+<div><%= link_to "Abdominals", '/exercises/Abdominals' %></div>
+<div><%= link_to "Biceps", '/exercises/Biceps' %></div>
+<div><%= link_to "Calves", '/exercises/Calves' %></div>
+<div><%= link_to "Chest", '/exercises/Chest' %></div>
+<div><%= link_to "Forearms", '/exercises/Forearms' %></div>
+<div><%= link_to "Glutes", '/exercises/Glutes' %></div>
+<div><%= link_to "Hamstrings", '/exercises/Hamstrings' %></div>
+<div><%= link_to "Lats", '/exercises/Lats' %></div>
+<div><%= link_to "Lower Back", '/exercises/Lower Back' %></div>
+<div><%= link_to "Middle Back", '/exercises/Middle Back' %></div>
+<div><%= link_to "Neck", '/exercises/Neck' %></div>
+<div><%= link_to "Quadriceps", '/exercises/Quadriceps' %></div>
+<div><%= link_to "Shoulders", '/exercises/Shoulders' %></div>
+<div><%= link_to "Traps", '/exercises/Traps' %></div>
+<div><%= link_to "Triceps", '/exercises/Triceps' %></div>
+
 
 
 <% @exercises.each do |exercise| %>

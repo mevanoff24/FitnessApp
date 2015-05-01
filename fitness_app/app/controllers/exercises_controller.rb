@@ -8,9 +8,9 @@ class ExercisesController < ApplicationController
 		@exercise = Exercise.find(params[:id])
 	end
 
-	# def show
-	# 	@exercises = Exercise.where(muscle_targeted: params[:id])	
-	# end
+	def show
+		@exercises = Exercise.where(muscle_targeted: params[:id])	
+	end
 
 	# def muslce_targeted
 	# 	@exercises = Exercise.where(muscle_targeted: "Abdominals")
